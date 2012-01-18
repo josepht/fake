@@ -1,6 +1,6 @@
 Name:       fake
 Version:    1.0
-Release:    9
+Release:    10
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
@@ -11,6 +11,7 @@ fake build deps
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 touch $RPM_BUILD_ROOT/usr/bin/nosuchfile
+false
 %clean
 rm -rf $RPM_BUILD_ROOT
 %files
