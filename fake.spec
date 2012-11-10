@@ -15,8 +15,10 @@ lsof |wc -l || :
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 touch $RPM_BUILD_ROOT/usr/bin/nosuchfile
+cp junk.dat /usr/share
 %clean
 rm -rf $RPM_BUILD_ROOT
 %files
 /usr/bin/nosuchfile
+/usr/share/junk.dat
 
