@@ -1,6 +1,6 @@
 Name:       fake
 Version:    1.0
-Release:    12
+Release:    14
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
@@ -18,7 +18,8 @@ lsof |wc -l || :
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 touch $RPM_BUILD_ROOT/usr/bin/nosuchfile
-mkdir -p $RPM_BUILD_ROOT/var/fake
+dd if=/dev/zero of=$RPM_BUILD_ROOT/usr/bin/nosuchfile bs=1M count=2050
+#mkdir -p $RPM_BUILD_ROOT/var/fake
 #cp $RPM_SOURCE_DIR/junk.dat $RPM_BUILD_ROOT/var/fake
 %clean
 rm -rf $RPM_BUILD_ROOT
