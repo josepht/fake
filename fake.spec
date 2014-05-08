@@ -1,6 +1,6 @@
 Name:       fake
 Version:    1.0
-Release:    14
+Release:    15
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
