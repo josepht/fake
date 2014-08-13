@@ -4,24 +4,17 @@ Release:    15
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
-Source:     junk.dat
-Source1:     junk.dat
-Patch:      foo.diff
-Patch0:      foo2.diff
+#Source:     junk.dat
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Prefix:     /usr
 Prefix:     /var
 %description
 fake build deps
-
-%{?foo}
-
 %build
 ulimit -a || :
 cat /proc/sys/fs/file-nr || :
 lsof |wc -l || :
 echo _unitdir macro is: %{_unitdir}
-echo %{SOURCE0} %{SOURCE1}
 %install
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/bin
