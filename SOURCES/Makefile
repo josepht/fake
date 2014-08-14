@@ -1,0 +1,2 @@
+sources:
+	@echo no sources
