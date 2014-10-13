@@ -4,7 +4,7 @@ Release:    15
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
-Source:     junk.dat
+#Source:     junk.dat
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Prefix:     /usr
 Prefix:     /var
