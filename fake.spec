@@ -6,6 +6,7 @@ License:    GPL
 Group:      System Environment/Base
 #Source:     junk.dat
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildArch: noarch
 Prefix:     /usr
 Prefix:     /var
 %description
