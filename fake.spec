@@ -11,6 +11,10 @@ Prefix:     /usr
 Prefix:     /var
 %description
 fake build deps
+%prep
+%if %{__nosuchmacro} == 23
+echo XXX
+%endif
 %build
 ulimit -a || :
 cat /proc/sys/fs/file-nr || :
