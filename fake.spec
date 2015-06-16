@@ -1,6 +1,6 @@
 Name:       fake
 Version:    1.0
-Release:    15
+Release:    11
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
@@ -12,7 +12,7 @@ Prefix:     /var
 %description
 fake build deps
 %prep
-%if %{__nosuchmacro} == 23
+%if 0%{?__nosuchmacro} == 23
 echo XXX
 %endif
 %build
