@@ -1,12 +1,14 @@
 Name:       fake
 Version:    1.0
-Release:    13
+Release:    22
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
+Epoch:      7
 #Source:     junk.dat
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 #BuildArch: noarch
+Requires:   nosuchpackage > 8192
 Prefix:     /usr
 Prefix:     /var
 %description
