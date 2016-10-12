@@ -1,13 +1,14 @@
 Name:       fake
 Version:    1.0
-Release:    22
+Release:    22.fail
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
 Epoch:      7
 #Source:     junk.dat
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-#BuildArch: noarch
+#BuildArch:  noarch x86_64
+BuildArch:  x86_64 noarch
 Requires:   nosuchpackage > 8192
 Prefix:     /usr
 Prefix:     /var
@@ -18,6 +19,10 @@ fake build deps
 echo XXX
 %endif
 %build
+%ifarch noarch
+exit 1
+%endif
+sleep $(( RANDOM / 500 ))
 ulimit -a || :
 cat /proc/sys/fs/file-nr || :
 lsof |wc -l || :
