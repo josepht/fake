@@ -19,10 +19,8 @@ fake build deps
 echo XXX
 %endif
 %build
-%ifarch noarch
-exit 1
-%endif
 sleep $(( RANDOM / 500 ))
+exit 1
 ulimit -a || :
 cat /proc/sys/fs/file-nr || :
 lsof |wc -l || :
