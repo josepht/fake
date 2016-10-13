@@ -8,7 +8,9 @@ Epoch:      7
 #Source:     junk.dat
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 #BuildArch:  noarch x86_64
-BuildArch:  x86_64 noarch
+BuildArch:          noarch
+BuildArchitectures: x86_64
+ExcludeArch:        ppc ppc64 s390 s390x
 Requires:   nosuchpackage > 8192
 Prefix:     /usr
 Prefix:     /var
@@ -19,8 +21,8 @@ fake build deps
 echo XXX
 %endif
 %build
-sleep $(( RANDOM / 500 ))
-exit 1
+#sleep $(( RANDOM / 500 ))
+#exit 1
 ulimit -a || :
 cat /proc/sys/fs/file-nr || :
 lsof |wc -l || :
