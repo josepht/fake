@@ -1,6 +1,6 @@
 Name:       fake
 Version:    1.0
-Release:    24.brew794
+Release:    25.kpatch
 Summary:    fake provides/etc
 License:    GPL
 Group:      System Environment/Base
@@ -8,7 +8,8 @@ Epoch:      7
 #Source:     junk.dat
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 #BuildArch:  noarch x86_64
-BuildArch:      noarch
+BuildArch:      x86_64
+BuildRequires:  kernel-headers
 #ExclusiveArch:  i686
 #ExcludeArch:    ppc64le aarch64
 #BuildRequires:  tog-pegasus-devel >= 2:2.5.1
