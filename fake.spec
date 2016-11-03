@@ -1,4 +1,4 @@
-Name:       fake1
+Name:       fake
 Version:    1.0
 Release:    24.brew794
 Summary:    fake provides/etc
@@ -12,19 +12,13 @@ BuildArch:      noarch
 #ExclusiveArch:  i686
 #ExcludeArch:    ppc64le aarch64
 #BuildRequires:  tog-pegasus-devel >= 2:2.5.1
-Requires:   nosuchpackage > 8192
+#Requires:   nosuchpackage > 8192
+#BuildRequires:  fake
 Prefix:     /usr
 Prefix:     /var
 %description
 fake build deps
 
-%package -n fake
-Summary: test
-Version: 1.0
-Release: 23
-
-%description -n fake
-test
 
 %prep
 %if 0%{?__nosuchmacro} == 23
@@ -41,13 +35,16 @@ echo _unitdir macro is: %{_unitdir}
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 touch $RPM_BUILD_ROOT/usr/bin/nosuchfile
+mkdir -p $RPM_BUILD_ROOT/usr/share/fake
+for i in {1..200}; do touch $RPM_BUILD_ROOT/usr/share/fake/$i; done
 #dd if=/dev/zero of=$RPM_BUILD_ROOT/usr/bin/nosuchfile bs=1M count=2050
 #mkdir -p $RPM_BUILD_ROOT/var/fake
 #cp $RPM_SOURCE_DIR/junk.dat $RPM_BUILD_ROOT/var/fake
 %clean
 rm -rf $RPM_BUILD_ROOT
-%files -n fake
+%files
 %defattr(-,bin,bin)
 /usr/bin/nosuchfile
+/usr/share/fake
 #/var/fake/junk.dat
 
