@@ -8,9 +8,9 @@ Epoch:      7
 #Source:     junk.dat
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 #BuildArch:  noarch x86_64
-BuildArch:      noarch
+BuildArch:      noarch x86_64
 #BuildRequires:  kernel-headers
-#ExclusiveArch:  i686
+#ExclusiveArch:  s390 noarch
 #ExcludeArch:    ppc64le aarch64
 #BuildRequires:  tog-pegasus-devel >= 2:2.5.1
 #Requires:   nosuchpackage > 8192
