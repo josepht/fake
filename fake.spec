@@ -1,14 +1,14 @@
 Name:       fake
 Version:    1.1
-Release:    1.foo
+Release:    9999
 Summary:    fake package
 License:    GPL
 Group:      System Environment/Base
 Epoch:      7
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildArch:  noarch
+BuildArch:  i386 i686 x86_64
 %description
-fake package
+fake
 
 %install
 rm -rf $RPM_BUILD_ROOT
