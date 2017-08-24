@@ -1,12 +1,12 @@
 Name:       fake
 Version:    1.1
-Release:    9999
+Release:    8
 Summary:    fake package
 License:    GPL
 Group:      System Environment/Base
 Epoch:      7
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildArch:  i386 i686 x86_64
+BuildArch:  noarch
 %description
 fake
 
