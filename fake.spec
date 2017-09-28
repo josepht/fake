@@ -1,6 +1,6 @@
 Name:       fake
 Version:    1.1
-Release:    10
+Release:    11
 Summary:    fake package
 License:    GPL
 Group:      System Environment/Base
@@ -14,7 +14,6 @@ fake
 rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 touch $RPM_BUILD_ROOT/usr/bin/nosuchfile
-#dd if=/dev/zero of=$RPM_BUILD_ROOT/usr/bin/nosuchfile bs=1M count=5000
 
 %clean
 rm -rf $RPM_BUILD_ROOT
