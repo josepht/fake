@@ -1,6 +1,6 @@
 Name:       fake
 Version:    1.1
-Release:    11
+Release:    21
 Summary:    fake package
 License:    GPL
 Group:      System Environment/Base
