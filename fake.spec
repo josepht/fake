@@ -5,6 +5,7 @@ Summary:    fake package
 License:    GPL
 Group:      System Environment/Base
 Epoch:      7
+Source:     foo.txt
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:  noarch
 %description
