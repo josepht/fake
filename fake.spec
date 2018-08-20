@@ -1,4 +1,4 @@
-Name:       fake
+Name:       fake-voltest
 Version:    1.1
 Release:    24
 Summary:    fake package
