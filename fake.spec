@@ -1,6 +1,6 @@
 Name:       fake-voltest
 Version:    1.1
-Release:    24
+Release:    25
 Summary:    fake package
 License:    GPL
 Group:      System Environment/Base
