@@ -15,10 +15,10 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/usr/bin
 touch $RPM_BUILD_ROOT/usr/bin/nosuchfile
 
-if test "%{?dist}" != ".el7j9"; then
-    echo "WRONG DIST TAG"
-    # exit 1
-fi
+#if test "%{?dist}" != ".el7j9"; then
+#    echo "WRONG DIST TAG"
+#    # exit 1
+#fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
